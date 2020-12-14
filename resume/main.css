@@ -1,0 +1,183 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+    /* border-style:dashed; */
+}
+.container{
+    grid-area: container; 
+    display:grid;
+    width:100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "icon"
+    "nav";
+    background: rgb(153,204,153);
+    background: linear-gradient(90deg, rgba(153,204,153,1) 0%, rgba(197,211,229,1) 48%, rgba(204,153,204,1) 100%);
+    position: fixed;
+    height: 20%;
+  }
+  .icon {
+    grid-area: icon; 
+    margin-right: auto;
+    margin-left: auto;
+    width: 10%;
+    /* position: relative; */
+    
+  }
+
+  /* NAVBAR CSS */
+  nav{
+    grid-area: nav;
+      /* padding-left:4em;
+      padding-right: 4em; */
+    margin: 0 auto;
+      /* position: relative; */
+      /* top:20px; */
+    background-color: white;
+    width: 100%;
+    /* border-block-width: 100%; */
+    }
+  
+    nav ul {
+      margin:0;
+      padding:0;
+      display:flex;
+      justify-content: center;
+    }
+    nav li{
+      /* padding: 1em 0; */
+      list-style-type: none;
+      padding: 25px;
+      font-size: 1.7em;
+    }
+    
+    nav li a {
+      color: rgba(204,153,204,1);
+      font-weight: 600;
+      opacity: 0.6;
+      text-decoration: none;
+      transition: .3s;
+    }
+    
+    nav li a:hover {
+      color: rgba(153,204,153,1);
+      opacity: 1;
+      text-decoration: none;
+    }
+  .empty{
+    height:100px;
+    grid-area: empty;
+  }
+
+/* li{
+    font-weight: 500px;
+    padding:10px;
+} */
+
+.date{
+    font-size: 12px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+}
+.resume{
+  padding-top: 240px;
+  padding-left: 60px;
+  padding-bottom: 60px;
+  background-color: #C5D3E5;
+}
+ul{
+    list-style: none;
+}
+
+
+h1{
+    width: 500px;
+    margin-bottom: 20px;
+    font-size: 5em;
+}
+h2{
+    padding-top:0px;
+    padding-bottom: 20px;
+    color: rgb(48, 104, 179)
+}
+
+h3{
+    /* padding-top: 15px; */
+    padding: bottom 5px;
+
+    font-size: 14px;
+  
+}
+h4{
+    font-size:12px;
+    }
+h5{
+  font-size:18px;
+}
+h6{
+    font-size:12px; 
+}
+header{
+    font-size:40px;
+    text-align: center;
+    color: rgb(48, 104, 179)
+}
+.address h5{
+  font-size: 18px;
+}
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 1100px) {
+
+    .page{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "container"
+        "d"
+        /* header */
+        "h" 
+        /* experience */
+        "b"
+        /* education */
+        "e"
+        /* work */
+        "a"
+        /* footer */
+        "f";
+    }
+}
+
+.address{
+grid-area: d;
+text-align:center;
+}
+
+header {
+    grid-area: h;
+    padding-top: 4px;
+}
+.experience {
+    grid-area: b;
+}
+
+.education {
+    grid-area: e;
+}
+li{
+    display:inline;
+    padding: 25px;
+}
+footer{
+  grid-area:f;
+  background: rgb(153,204,153);
+  background: linear-gradient(90deg, rgba(153,204,153,1) 0%, rgba(197,211,229,1) 48%, rgba(204,153,204,1) 100%);
+  padding: 20vh 50px 0 50px;
+}

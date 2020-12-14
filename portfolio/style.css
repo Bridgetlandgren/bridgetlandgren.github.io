@@ -1,0 +1,134 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* border-style: dashed; */
+    /* box-sizing: border-box; */
+    }
+    .container{
+        grid-area: container; 
+        display:grid;
+        width:100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "icon"
+        "nav";
+        background: rgb(153,204,153);
+        background: linear-gradient(90deg, rgba(153,204,153,1) 0%, rgba(197,211,229,1) 48%, rgba(204,153,204,1) 100%);
+        position: fixed;
+        /* height: 20%; */
+      }
+      .icon {
+        grid-area: icon; 
+        margin-right: auto;
+        margin-left: auto;
+        width: 10%;
+        /* position: relative; */
+        
+      }
+      /* NAVBAR CSS */
+      nav{
+        grid-area: nav;
+        margin: 0 auto;
+        background-color: white;
+        width: 100%;
+       
+        }
+      
+        nav ul {
+          margin:0;
+          padding:0;
+          display:flex;
+          justify-content: center;
+        }
+        nav li{
+          /* padding: 1em 0; */
+          list-style-type: none;
+          padding: 25px;
+          font-size: 1.7em;
+        }
+        
+        nav li a {
+          color: rgba(204,153,204,1);
+          font-weight: 600;
+          opacity: 0.6;
+          text-decoration: none;
+          transition: .3s;
+        }
+        
+        nav li a:hover {
+          color: rgba(153,204,153,1);
+          opacity: 1;
+          text-decoration: none;
+        }
+      
+      .empty{
+        height:200px;
+        grid-area: empty;
+      }
+      /* IMAGE GALLERY */
+      .gallery {
+        grid-area: gallery;
+        height: 150%;
+        display: grid;
+        position: static;
+        background-image: url("images/portfolio_background.svg");
+        grid-template-columns: auto;
+        grid-template-rows: 50px 50px 50px 50px;
+        grid-gap: 100px;
+        /* border-radius: 30%; */
+        /* padding-top: 100px;
+        padding-bottom: 100px; */
+        grid-template-areas:
+        ". a b c d."
+        ". e f g h ."
+        ". i j k l";
+      }
+      .graphic img{
+        height: 230px;
+        grid-area: a/ b/ c/ d;
+        padding: 95px 15px 00px 15px;
+        padding-inline-start: 90px;
+        /* display: inline-flex;
+        flex-wrap: wrap; 
+        align-content:center;
+        align-self: center; */
+        /* width: 230px; */
+      }
+
+      .makeup img{
+        grid-area: e/ f/ g/ h;
+        padding: 310px 15px 0px 40px;
+        padding-inline-start: 90px;
+        align-items: center;
+        width: 230px;
+      }
+      .portraits img{
+        grid-area:i/ j/ k/ l;
+        padding: 520px 15px 0px 40px;
+        padding-inline-start: 90px;
+        align-items: center;
+        width: 230px;
+      }
+      /* div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+        border-radius: 30%;
+      }
+      
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      } */
